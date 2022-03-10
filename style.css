@@ -6,14 +6,13 @@ h1, p, a{
 }
 nav{
     display: flex;
-    
     align-items: flex-start;
 
 }
 .menu{
     flex: 1;
     display: inline-block;
-    max-width: 150px;
+    width: 150px;
     
 }
 nav button{
@@ -31,16 +30,11 @@ ul{
     opacity: 0;
     transition: 0.4s;
     border-radius: 0.5rem;
-    z-index: 0;
-
 }
 nav button:focus + ul{
     opacity: 1;
-    z-index: 1;
 }
-nav button:focus + a{
-z-index: 1;
-}
+
 ul li{
     list-style: none;
 }
@@ -95,8 +89,10 @@ ul li{
     border-radius: 2rem;
     border-width: 0.5rem;
     border-style: solid;
-    border-image: linear-gradient(red, blue) 1;
+    border-image: linear-gradient(red, rgb(255, 191, 15)) 1;
+    cursor: pointer;
 }
+.signup:hover{background-color: rgb(250, 228, 189);}
 /* ******************************** */
 .colorful{
     height: 300px;
@@ -125,6 +121,9 @@ ul li{
 .logos img{
     object-fit: cover;
 }
+.logos img:nth-child(5){
+    display: none;
+}
 /* ************************************ */
 .text2{
     margin: 4rem 0 3rem;
@@ -133,6 +132,7 @@ ul li{
 }
 /* ************************************* */
 .card-row{
+    
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -208,14 +208,94 @@ ul li{
     cursor: pointer;
 }
 .col a:hover{
-    color: rgb(82, 80, 80);
+    color: rgb(155, 146, 146);
 }
-.footer p{
+.pfoot{
     color: rgb(185, 181, 181);
 }
 @media only screen and (min-width: 600px){
-*{
-    background-color: aqua;
+nav{
+    display: flex;
+    justify-content: space-between;
+    
+}
+ul{
+    opacity: 1;
+    background-color: white;
+    text-align: right;
+    
+}
+ul li {
+    display: inline;
+    padding: 0 0.3rem;
+}
+.logo{
+    flex:1;
+}
+.menu{
+    flex: 2;
+    max-width: auto;
+}
+.menu-logo{
+    display: none;
+}
+/* **************************** */
+.text1{
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4rem;
+}
+.font2{
+    padding: 0;
+    margin: 0;
+    font-size: 3rem;
+}
+.signup{
+    max-width: 150px;
+    margin:0 auto;
+}
+
+.content1{
+    display: flex;
+    justify-content: space-evenly;
+}
+.logos{
+    display: flex;
+    justify-content: space-around;
+}
+.complogo{
+ max-width: 100px;
+}
+.logos img:nth-child(5){
+    display: block;
+}
+.big-img2{
+    max-height:500px;
+}
+.text3{
+   display: flex; 
+   flex-direction: column;
+   max-width: 300px;
+}
+.card-row{
+    width: 100%;
+    overflow: scroll;
+}
+.card{
+    min-width: 270px;
+}
+.card-img{
+    width: 100%
+}
+.footer{
+    display: flex;
+}
+.botlist{
+    display: flex;
+}
+.colorful{
+    border-radius: 1rem;
 }
 }
 
